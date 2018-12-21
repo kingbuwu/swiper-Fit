@@ -1,0 +1,3 @@
+<view>
+  <swiper-fit listimg="{{listimg}}"></swiper-fit>
+</view>

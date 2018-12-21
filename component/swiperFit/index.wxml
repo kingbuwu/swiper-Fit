@@ -1,0 +1,16 @@
+<!--轮播图  -->
+<view class="swiper-container" style='height:{{configimg[0].maxHeight}}rpx'>
+  <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{true}}" bindchange='swiperchange' style='height:{{configimg[0].maxHeight}}rpx'>
+    <block wx:for="{{configimg}}" wx:for-item="itemswiper" wx:key="{{index}}">
+      <swiper-item>
+        <image mode='widthFix' bindtap="tapBanner" src="{{itemswiper.showImg}}" class="slide-image"
+          width="750rpx" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots">
+    <block wx:for="{{configimg}}" wx:key="{{index}}">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
